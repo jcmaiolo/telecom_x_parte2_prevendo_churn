@@ -1,28 +1,33 @@
-# Telecom X – Parte 2: Prevendo Churn
+📉 Telecom X – Parte 2: Prevendo Churn
 
-## 1. Propósito da Análise
-O objetivo principal deste projeto é desenvolver um modelo preditivo de Machine Learning capaz de identificar clientes com alta probabilidade de cancelar seus serviços (Churn). Com isso, a Telecom X pode agir preventivamente com estratégias de retenção.
+🎯 1. Propósito da Análise
+Este projeto visa desenvolver um modelo de Machine Learning de alta performance para prever o cancelamento de serviços (Churn) na Telecom X. O foco principal não é apenas a acurácia, mas o Recall, garantindo que a empresa identifique o maior número possível de clientes em risco antes que eles deixem a base.
 
-## Identificação
-* **Nome:** João C. Maiolo
-* **E-mail Alura:** joao.c.maiolo@uol.com.br
+🚀 2. Resultados Alcançados
+Após o tratamento de dados (Engenharia de Variáveis) e balanceamento com SMOTE, comparamos dois modelos principais:
+MétricaRegressão LogísticaRandom Forest (Campeão)Acurácia Geral82,32%84,20%Recall (Classe Churn)81,00%84,00%Clientes Identificados844872 (Melhor Retenção)
+Veredito: A Random Forest foi o modelo escolhido por sua capacidade superior de capturar padrões não-lineares, identificando 28 clientes a mais que seriam perdidos em comparação à Regressão Logística.
 
-## 2. Estrutura do Projeto
-- `telecom_churn.ipynb`: Notebook principal com todo o código.
-- `dados/`: Pasta contendo o arquivo CSV tratado da Parte 1.
-- `visualizacoes/`: Gráficos gerados durante a análise (EDA).
+🔍 3. Insights Estratégicos (Findings)
+A análise revelou que o Churn na Telecom X é impulsionado por fatores específicos:
+⚠️ O Vilão do Pagamento Manual: Clientes que utilizam boletos ou cheques eletrônicos têm a maior taxa de evasão. A "fricção" do pagamento mensal estimula o cancelamento.
+📡 O Risco da Fibra Óptica: Apesar de ser tecnologia de ponta, clientes de fibra apresentam alta rotatividade, indicando necessidade de revisão de preços ou qualidade.
+🛡️ O Escudo do Tenure: Clientes com mais de 12-24 meses de casa e contratos de longo prazo são a base de sustentação da empresa e raramente cancelam.
 
-## 3. Preparação dos Dados (Em andamento)
-*Nesta seção, descreverei a classificação das variáveis, o processo de encoding/normalização e a divisão entre treino e teste.*
+🛠️ 4. Tecnologias e Técnicas Utilizadas
+Linguagem: Python
+Manipulação de Dados: Pandas, NumPy
+Visualização: Matplotlib, Seaborn
+Machine Learning: Scikit-Learn (Logistic Regression, Random Forest)
+Pré-processamento: One-Hot Encoding (drop_first=True), Min-Max Scaling, SMOTE (Oversampling).
 
-## 4. Insights e Visualizações (EDA)
-*Aqui serão incluídos os gráficos de correlação e as principais descobertas sobre o perfil dos clientes que cancelam o serviço.*
+📋 5. Estrutura do Repositório
+notebook/: Arquivo .ipynb com a análise completa.
+data/: Base de dados utilizada 
+reports/: Gráficos de importância de variáveis e matrizes de confusão.
 
-## 5. Modelagem e Justificativas
-*Relato sobre a escolha dos modelos (Ex: Regressão Logística e Random Forest) e métricas de avaliação.*
+👤 Identificação
+Nome: João Carlos Maiolo
+e-mail: joao.c.maiolo@uol.com.br
 
-## 6. Como Executar o Projeto
-1. Clone este repositório.
-2. Faça o upload do arquivo CSV na pasta de dados.
-3. Abra o notebook no **Google Colab**.
-4. Certifique-se de ter as bibliotecas instaladas: `pandas`, `numpy`, `scikit-learn`, `matplotlib`, `seaborn`.
+
